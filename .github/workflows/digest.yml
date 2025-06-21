@@ -24,12 +24,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run digest script
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          NEWSAPI_KEY:    ${{ secrets.NEWSAPI_KEY }}
-          TW_BEARER:      ${{ secrets.TW_BEARER }}
-          FRED_KEY:       ${{ secrets.FRED_KEY }}
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          CHANNEL_ID:     ${{ secrets.CHANNEL_ID }}
-          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+       env:
+  TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+  CHANNEL_ID:     ${{ secrets.CHANNEL_ID }}
         run: python telegram-digest.py
