@@ -3,3 +3,4 @@ requests
 feedparser
 python-dotenv
 python-telegram-bot
+beautifulsoup4
